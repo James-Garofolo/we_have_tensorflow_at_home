@@ -6,7 +6,7 @@
 
 using namespace std;
 
-activation::activation(unsigned int type, float funct_slope = 0, float int_threshold = 0.9){
+activation::activation(unsigned int type, float funct_slope, float int_threshold){
     function_type = type;
     threshold = int_threshold;
     slope = funct_slope;
@@ -40,7 +40,7 @@ float activation::leaky_ReLU(float in){
 
 float activation::integrate_fire(float in){
     last = last + in;
-    int temp = last;
+    float temp = last;
     if (last >= threshold){
         last = 0;
         return temp;
@@ -50,7 +50,7 @@ float activation::integrate_fire(float in){
 
 float activation::leaky_integrate_fire(float in){
     last = (slope * last) + in;
-    int temp = last;
+    float temp = last;
     if (last >= threshold){
         last = 0;
         return temp;

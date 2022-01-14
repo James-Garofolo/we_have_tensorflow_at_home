@@ -1,0 +1,3 @@
+﻿  nn_maker.cpp
+C:\Users\JimG9\Desktop\C++ shit\we_have_tensorflow_at_home\cppsrc\nn_maker.cpp(17,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  ConsoleApplication1.vcxproj -> C:\Users\JimG9\Desktop\C++ shit\we_have_tensorflow_at_home\cppsrc\ConsoleApplication1\Debug\ConsoleApplication1.exe

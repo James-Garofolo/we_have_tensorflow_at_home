@@ -8,7 +8,7 @@ using namespace std;
 
 int main(){
     activation one(sig), two(relu), three(int_fire), four(lrelu, 0.001), five(lif, 0.5, 0.99);
-    float timeone, timetwo, timethree;
+    double timeone, timetwo, timethree;
 
     cout << "sigmoid at zero:\t" << one.activate(0) << "\nsigmoid at a lot:\t" << one.activate(100) << "\n\n";
 
@@ -24,9 +24,9 @@ int main(){
 
     timeone = five.activate(0.5);
     timetwo = five.activate(0);
-    timethree = five.activate(2);
+    timethree = five.activate(1.8);
 
-    cout << "non-leaky integrate fire one:\t" << timeone << "two:\t" << timetwo << "three:\t" << timethree << "\n\n";
+    cout << "leaky integrate fire one:\t " << timeone << "two:\t " << timetwo << "three:\t " << timethree << "\n\n";
 
     while (true)
 
